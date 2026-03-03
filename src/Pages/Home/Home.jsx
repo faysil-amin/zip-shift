@@ -3,6 +3,7 @@ import Container from "../../Sheard/Navbar/Cotainer/Container";
 import HomeBanner from "../HomeBanner/HomeBanner";
 import HomeWorkCard from "../HomeWorkCard/HomeWorkCard";
 import HomeServeces from "../HomeServeces/HomeServeces";
+import HomeLogoScroller from "./HomeLogoScroller/HomeLogoScroller";
 
 const Home = () => {
   return (
@@ -15,6 +16,9 @@ const Home = () => {
       </div>
       <div className="mt-8">
         <HomeServeces></HomeServeces>
+      </div>
+      <div>
+        <HomeLogoScroller></HomeLogoScroller>
       </div>
     </Container>
   );

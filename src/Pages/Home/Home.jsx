@@ -4,6 +4,7 @@ import HomeBanner from "../HomeBanner/HomeBanner";
 import HomeWorkCard from "../HomeWorkCard/HomeWorkCard";
 import HomeServeces from "../HomeServeces/HomeServeces";
 import HomeLogoScroller from "./HomeLogoScroller/HomeLogoScroller";
+import HomeParcelTraking from "./HomeParcelTraking/HomeParcelTraking";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <div className="mt-6">
         <HomeBanner></HomeBanner>
       </div>
-      <div>
+      <div className="mt-12">
         <HomeWorkCard></HomeWorkCard>
       </div>
       <div className="mt-8">
@@ -19,6 +20,9 @@ const Home = () => {
       </div>
       <div>
         <HomeLogoScroller></HomeLogoScroller>
+      </div>
+      <div>
+        <HomeParcelTraking></HomeParcelTraking>
       </div>
     </Container>
   );

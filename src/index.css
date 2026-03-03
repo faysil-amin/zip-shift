@@ -5,4 +5,5 @@
   default: true;
   --color-primary: #eaeced;
   --color-secondary: #caeb66;
+  --color-accent: #606060;
 }

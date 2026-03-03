@@ -4,11 +4,10 @@ import { Outlet } from "react-router";
 
 const RootLayout = () => {
   return (
-    <div className="bg-primary h-screen">
+    <div className="bg-primary h-full">
       <nav className="pt-4">
         <Navbar></Navbar>
       </nav>
-
       <Outlet></Outlet>
     </div>
   );

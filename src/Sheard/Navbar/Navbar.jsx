@@ -1,28 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router";
 import Container from "./Cotainer/Container";
 import Logo from "../Logo/Logo";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Navbar = () => {
+  const [color, setColor] = useState("Services");
   const link = (
     <>
-      <li>
+      <li
+        className={`${color === "Services" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
+        onClick={() => setColor("Services")}
+      >
         <NavLink to={"/services"}>Services</NavLink>
       </li>
-      <li>
+      <li
+        className={`${color === "Coverage" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
+        onClick={() => setColor("Coverage")}
+      >
         <NavLink to={"/coverage"}>Coverage</NavLink>
       </li>
-      <li>
+      <li
+        className={`${color === "AboutUs" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
+        onClick={() => setColor("AboutUs")}
+      >
         {" "}
         <NavLink to={"/aboutus"}>About Us</NavLink>
       </li>
-      <li>
+      <li
+        className={`${color === "Pricing" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
+        onClick={() => setColor("Pricing")}
+      >
         <NavLink to={"/pricing"}>Pricing</NavLink>
       </li>
-      <li>
+      <li
+        className={`${color === "Blog" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
+        onClick={() => setColor("Blog")}
+      >
         <NavLink to={"/blog"}>Blog</NavLink>
       </li>
-      <li>
+      <li
+        className={`${color === "Contact" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
+        onClick={() => setColor("Contac")}
+      >
         <NavLink to={"/contact"}>Contact</NavLink>
       </li>
     </>
@@ -56,15 +76,26 @@ const Navbar = () => {
               {link}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
+          <a className="text-sm md:text-xl hidden md:flex">
             <Logo></Logo>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-semibold">{link}</ul>
+          <ul className="flex items-center gap-4 font-semibold">{link}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end  md:flex items-center gap-2 ">
+          <button className="md:px-4 px-2 py-1 md:py-2  rounded-lg font-semibold  border border-mauve-500 hover:bg-mauve-200">
+            <NavLink className="text-sm md:text-xl">SingIn</NavLink>
+          </button>
+
+          <div className="flex">
+            <button className="md:px-4 px-2 py-1 md:py-2  rounded-lg font-semibold  bg-secondary">
+              <NavLink className="text-sm md:text-xl">SingUp</NavLink>
+            </button>
+            <NavLink className="bg-black p-1 md:p-2 text-secondary flex items-center justify-center font-bold text-xl rounded-[50%]">
+              <FiArrowUpRight />
+            </NavLink>
+          </div>
         </div>
       </div>
     </Container>

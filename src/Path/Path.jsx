@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
-import RootLayout from "../RootLayout/RootLayout";
-import Home from "../Pages/Home/Home";
+import RootLayout from "../Layout/RootLayout/RootLayout";
+import Coverage from "../Pages/Coverage/Coverage";
+import Services from "../Pages/Services/Services";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -8,7 +9,12 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home,
+        Component: Services,
+      },
+      {
+        path: "/coverage",
+        Component: Coverage,
+        loader: () => fetch("/warehouses.json"),
       },
     ],
   },

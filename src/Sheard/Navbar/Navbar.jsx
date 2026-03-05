@@ -12,7 +12,7 @@ const Navbar = () => {
         className={`${color === "Services" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}
         onClick={() => setColor("Services")}
       >
-        <NavLink to={"/services"}>Services</NavLink>
+        <NavLink to={"/"}>Services</NavLink>
       </li>
       <li
         className={`${color === "Coverage" ? "bg-secondary rounded-lg px-2 py-1" : ""}`}

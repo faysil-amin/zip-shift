@@ -39,7 +39,7 @@ const HomeServeces = () => {
       <h1 className="text-white text-2xl font-bold text-center pt-14">
         Our Services
       </h1>
-      <p className="text-white max-w-7/12 mx-auto text-center mt-2  md:px-0">
+      <p className="text-white px-4 md:max-w-7/12 mx-auto text-center mt-2  md:px-0">
         Enjoy fast, reliable parcel delivery with real-time tracking and zero
         hassle. From personal packages to business shipments — we deliver on
         time, every time.

@@ -11,7 +11,7 @@ import { Autoplay } from "swiper/modules";
 const HomeLogoScroller = () => {
   return (
     <div className="pb-12 border-b-mauve-500 border-dashed">
-      <h1 className="mt-10 mb-6 text-center font-bold text-xl">
+      <h1 className="mt-10 mb-6 text-center font-bold text-lg md:text-xl px-16">
         We've helped thousands of sales teams
       </h1>
       <Swiper
